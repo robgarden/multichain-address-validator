@@ -38,7 +38,9 @@ npm install multicoin-address-validator
 * Algorand/algo `'Algorand'` or `'algo'`
 * Apecoin/ape `'Apecoin'` or `'ape'`
 * API3/api3 `'API3'` or `'api3'`
+* Aptos/apt `'Aptos'` or `'apt'`
 * Aragon/ant `'Aragon'` or `'ant'`
+* Arbitrum/arb `'Arbitrum'` or `'arb'`
 * Arbitrum/arb `'Arbitrum'` or `'arb'`
 * Augur/rep `'Augur'` or `'rep'`
 * AugurV2/repv2 `'AugurV2'` or `'repv2'`
@@ -52,6 +54,7 @@ npm install multicoin-address-validator
 * BeaverCoin/bvc `'BeaverCoin'` or `'bvc'`
 * Biconomy/bico `'Biconomy'` or `'bico'`
 * Binance/bnb `'Binance'` or `'bnb'`
+* BinanceSmartChain/bnb `'BinanceSmartChain'` or `'bnb'`
 * BioCoin/bio `'BioCoin'` or `'bio'`
 * Bitcoin/btc `'Bitcoin'` or `'btc'`
 * Bitcoin SV/bsv `'Bitcoin SV'` or `'bsv'`
@@ -98,6 +101,7 @@ npm install multicoin-address-validator
 * Golem/glm `'Golem'` or `'glm'`
 * Golem (GNT)/gnt `'Golem (GNT)'` or `'gnt'`
 * Hashflow/hft `'Hashflow'` or `'hft'`
+* Hedera/hbar `'Hedera'` or `'hbar'`
 * HedgeTrade/hedg `'HedgeTrade'` or `'hedg'`
 * Hush/hush `'Hush'` or `'hush'`
 * HyperSpace/xsc `'HyperSpace'` or `'xsc'`
@@ -162,6 +166,7 @@ npm install multicoin-address-validator
 * Storj/storj `'Storj'` or `'storj'`
 * Storm/storm `'Storm'` or `'storm'`
 * StormX/stmx `'StormX'` or `'stmx'`
+* Sui/sui `'Sui'` or `'sui'`
 * SuperVerse/super `'SuperVerse'` or `'super'`
 * Swarm City/swt `'Swarm City'` or `'swt'`
 * Synthetix Network/snx `'Synthetix Network'` or `'snx'`

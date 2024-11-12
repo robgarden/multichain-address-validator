@@ -305,6 +305,71 @@ describe('WAValidator.validate()', function () {
             valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'CLO');
         });
 
+        it('should return true for correct Aptos addresses', function () {
+            valid('0xaabf25b0c115130a4ad88bfa08627c5a103b7851e90869c23fadaf0512dd5133', 'aptos');
+            valid('0xdce6ab89a1d26c99491a70fd4a2536d065925114deee916a1ae7d35007f4dedf', 'aptos');
+            valid('0xd05448f15a03f25b2816c4538b72bd54752ba7522d4831a4c9ea5a613becb47a', 'APT');
+            valid('0x39f521d22f611a4dec2f790fef2e4f8d1f96550509e85beccf8acec52c1a7219', 'APT');
+        });
+
+        it('should return true for correct SUI addresses', function () {
+            valid('0xaabf25b0c115130a4ad88bfa08627c5a103b7851e90869c23fadaf0512dd5133', 'sui');
+            valid('0xdce6ab89a1d26c99491a70fd4a2536d065925114deee916a1ae7d35007f4dedf', 'sui');
+            valid('0xd05448f15a03f25b2816c4538b72bd54752ba7522d4831a4c9ea5a613becb47a', 'SUI');
+            valid('0x39f521d22f611a4dec2f790fef2e4f8d1f96550509e85beccf8acec52c1a7219', 'SUI');
+        });
+
+        it('should return true for correct Arbitrum addresses', function () {
+            valid('0xE37c0D48d68da5c5b14E5c1a9f1CFE802776D9FF', 'arb');
+            valid('0xa00354276d2fC74ee91e37D085d35748613f4748', 'arb');
+            valid('0xAff4d6793F584a473348EbA058deb8caad77a288', 'ARB');
+            valid('0xc6d9d2cd449a754c494264e1809c50e34d64562b', 'ARB');
+            valid('0x52908400098527886E0F7030069857D2E4169EE7', 'ARB');
+            valid('0x8617E340B3D01FA5F11F306F4090FD50E238070D', 'ARB');
+            valid('0xde709f2102306220921060314715629080e2fb77', 'ARB');
+            valid('0x27b1fdb04752bbc536007a920d24acb045561c26', 'ARB');
+            valid('0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed', 'ARB');
+            valid('0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359', 'ARB');
+            valid('0xdbF03B407c01E7cD3CBea99509d93f8DDDC8C6FB', 'ARB');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ARB');
+
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'arbitrum');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ARB');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'usdt', {chainType: 'arbitrum'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ETZ', {chainType: 'arbitrum'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'callisto', {chainType: 'arbitrum'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'UNKNOWN token', {chainType: 'arbitrum'});
+        });
+
+        it('should return true for correct Binance addresses', function () {
+            valid('0xE37c0D48d68da5c5b14E5c1a9f1CFE802776D9FF', 'bnb');
+            valid('0xa00354276d2fC74ee91e37D085d35748613f4748', 'bnb');
+            valid('0xAff4d6793F584a473348EbA058deb8caad77a288', 'BNB');
+            valid('0xc6d9d2cd449a754c494264e1809c50e34d64562b', 'BNB');
+
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'binance');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'BINANCE');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'usdt', {chainType: 'binance'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ETZ', {chainType: 'binance'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'callisto', {chainType: 'binance'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'UNKNOWN token', {chainType: 'binance'});
+        });
+
+        it('should return true for correct BinanceSmartChain addresses', function () {
+            valid('0xE37c0D48d68da5c5b14E5c1a9f1CFE802776D9FF', 'bnb');
+            valid('0xa00354276d2fC74ee91e37D085d35748613f4748', 'bnb');
+            valid('0xAff4d6793F584a473348EbA058deb8caad77a288', 'BNB');
+            valid('0xc6d9d2cd449a754c494264e1809c50e34d64562b', 'BNB');
+
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'binancesmartchain');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'BinanceSmartChain');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'BINANCESMARTCHAIN');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'usdt', {chainType: 'BinanceSmartChain'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ETZ', {chainType: 'BinanceSmartChain'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'callisto', {chainType: 'binancesmartchain'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'UNKNOWN token', {chainType: 'BINANCESMARTCHAIN'});
+        });
+
         it('should return true for correct Ethereum POW addresses', function () {
             valid('0xE37c0D48d68da5c5b14E5c1a9f1CFE802776D9FF', 'ethereumPow');
             valid('0xa00354276d2fC74ee91e37D085d35748613f4748', 'ethereumPow');
@@ -796,6 +861,17 @@ describe('WAValidator.validate()', function () {
             valid('3My3KZgFQ3CrVHgz6vGRt8687sH4oAA1qp8', 'waves', 'testnet');
         });
 
+        it('should return true for correct hbar addresses', function () {
+            valid('0.0.12345', 'hbar');
+            valid('0.0.987654321', 'hbar');
+            valid('0.1.54321', 'hbar');
+            valid('1.0.123', 'hbar');
+            valid('2.3.45678', 'hedera');
+            valid('0.2.789', 'hedera');
+            valid('0.0.1', 'hedera');
+            valid('10.5.987', 'hedera');
+        });
+
         it('should return true for correct nano addresses', function () {
             valid('xrb_3t6k35gi95xu6tergt6p69ck76ogmitsa8mnijtpxm9fkcm736xtoncuohr3', 'nano');
             valid('xrb_13ezf4od79h1tgj9aiu4djzcmmguendtjfuhwfukhuucboua8cpoihmh8byo', 'nano');
@@ -809,7 +885,7 @@ describe('WAValidator.validate()', function () {
             valid('nano_1q79ahdr36uqn38p5tp5sqwkn73rnpj1k8obtuetdbjcx37d5gahhd1u9cuh', 'nano');
         });
 
-        it('should return true for correct Ethereum addresses', function () {
+        it('should return true for correct Flare addresses', function () {
             valid('0xE37c0D48d68da5c5b14E5c1a9f1CFE802776D9FF', 'flare');
             valid('0xa00354276d2fC74ee91e37D085d35748613f4748', 'flare');
             valid('0xAff4d6793F584a473348EbA058deb8caad77a288', 'FLR');
@@ -817,6 +893,14 @@ describe('WAValidator.validate()', function () {
             valid('0x52908400098527886E0F7030069857D2E4169EE7', 'FLR');
             valid('0x8617E340B3D01FA5F11F306F4090FD50E238070D', 'FLR');
             valid('0xde709f2102306220921060314715629080e2fb77', 'FLR');
+
+
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'flare');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'FLARE');
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'usdt', {chainType: 'flare'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ETZ', {chainType: 'Flare'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'callisto', {chainType: 'FLARE'});
+            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'UNKNOWN token', {chainType: 'FLARE'});
         })
 
         it('should return true for correct siacoin addresses', function () {
@@ -945,6 +1029,60 @@ describe('WAValidator.validate()', function () {
             invalid('%%@', currency, 'testnet'); //reject invalid base58 string
             invalid('bd839e4f6fadb293ba580df5dea7814399989983', currency, 'testnet');  //reject transaction id's
         }
+
+        it('should return false for incorrect avalanche addresses', function () {
+            commonTests('avalanche');
+
+            // solana address
+            invalid('5ndLnEYqSFiA5yUFHo6LVZ1eWc6Rhh11K5CfJNkoHEPs', 'usdc', {
+                chainType: 'avalanche'
+            })
+        });
+
+        it('should return false for incorrect flare addresses', function () {
+            commonTests('flare');
+
+            // solana address
+            invalid('5ndLnEYqSFiA5yUFHo6LVZ1eWc6Rhh11K5CfJNkoHEPs', 'usdc', {
+                chainType: 'flare'
+            })
+        });
+
+        it('should return false for incorrect binance addresses', function () {
+            commonTests('bnb');
+
+            // solana address
+            invalid('5ndLnEYqSFiA5yUFHo6LVZ1eWc6Rhh11K5CfJNkoHEPs', 'usdc', {
+                chainType: 'binance'
+            })
+        });
+
+        it('should return false for incorrect binancesmartchain addresses', function () {
+            commonTests('bnb');
+
+            // solana address
+            invalid('5ndLnEYqSFiA5yUFHo6LVZ1eWc6Rhh11K5CfJNkoHEPs', 'usdc', {
+                chainType: 'binancesmartchain'
+            })
+        });
+
+        it('should return false for incorrect solana addresses', function () {
+            commonTests('solana');
+
+            // bch address
+            invalid('bc1ql08eyrk03qytqc5pdp5fnwpfh0x3y3k2skauvd', 'usdc', {
+                chainType: 'solana'
+            })
+        });
+
+        it('should return false for incorrect arbitrum addresses', function () {
+            commonTests('arbitrum');
+
+            // bch address
+            invalid('bc1ql08eyrk03qytqc5pdp5fnwpfh0x3y3k2skauvd', 'usdc', {
+                chainType: 'arbitrum'
+            })
+        });
 
         it('should return false for incorrect bitcoin addresses', function () {
             commonTests('bitcoin');
@@ -1268,6 +1406,15 @@ describe('WAValidator.validate()', function () {
             invalid('12345678901@', 'eos');
         });
 
+        it('should return false for incorrect hbar addresses', function () {
+            commonTests('hedera');
+            commonTests('hbar');
+            invalid('0.0.12345-abcxyz', 'hbar');  //checksum address not supported
+            invalid('0.0.12345-abcxyz', 'hedera');  //checksum address not supported
+            invalid('0.1.54321-z9lpq', 'hbar');
+            invalid('hbar123', 'hbar');
+        });
+
         it('should return false for incorrect solana addresses', function () {
             invalid('833XQoXTx05iya53Tr6iqEs9GbRuvVfwyLCP2vpdzhq', 'solana');
             invalid('833XorXTTx5iya5B3Tr6iqEs9GbRuvVfwyLCP2vpdz', 'solana');
@@ -1418,6 +1565,22 @@ describe('invalid results', function () {
         invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'ethereumclassic');
         invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'etherzero');
         invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'callisto');
+    });
+
+    it('should return false for incorrect Aptos addresses', function () {
+        invalid('0xE37c0D48d68da5c5b14E5c1a9f1CFE802776D9FF', 'aptos');
+        invalid('0xa00354276d2fC74ee91e37D085d35748613f4748', 'aptos');
+        invalid('0xAff4d6793F584a473348EbA058deb8caad77a288', 'APT');
+        invalid('0xc6d9d2cd449a754c494264e1809c50e34d64562b', 'APT');
+        invalid('1669599662', 'APT');
+    });
+
+    it('should return false for incorrect SUI addresses', function () {
+        invalid('0xE37c0D48d68da5c5b14E5c1a9f1CFE802776D9FF', 'sui');
+        invalid('0xa00354276d2fC74ee91e37D085d35748613f4748', 'sui');
+        invalid('0xAff4d6793F584a473348EbA058deb8caad77a288', 'SUI');
+        invalid('0xc6d9d2cd449a754c494264e1809c50e34d64562b', 'SUI');
+        invalid('1669599662', 'SUI');
     });
 
     it('should return false for incorrect ripple addresses', function () {
@@ -1621,6 +1784,35 @@ describe('invalid results', function () {
         invalid('pjsLDC1JFyrhm3ftC9Gs4QoyrkHKhZKtK7YqGTRFtTafgp', 'dot');
         invalid('15FKUKXC6kwaXxJ1tNywmFy4ZY6FoDFCnU3fMbibFdeqwGw', 'dot');
         invalid('CxDDSH8gS7jecsxaRL8Txf8H5kqesLXAEAEgp76Yz632J9M', 'dot');
+    });
+
+    describe('Validation of chainTypeToValidator and CURRENCIES equality', function () {
+        it('should ensure chainTypeToValidator and CURRENCIES are deeply equal', function () {
+            // Get CURRENCIES array from the library
+            const CURRENCIES = WAValidator.getCurrencies();
+
+            // Convert CURRENCIES array to a mapping for comparison
+            const currencyMap = {};
+            CURRENCIES.forEach(currency => {
+                const { name, validator, addressTypes, bech32Hrp,
+                    maxLength, minLength, regexp, expectedLength, hashFunction, iAddressTypes } = currency;
+
+                currencyMap[name.toLowerCase()] = {
+                    validator,
+                    addressTypes,
+                    bech32Hrp,
+                    maxLength,
+                    minLength,
+                    regexp,
+                    expectedLength,
+                    hashFunction,
+                    iAddressTypes
+                };
+            });
+
+            // Compare the generated currencyMap with chainTypeToValidator
+            expect(WAValidator.getChainTypeToValidators()).to.deep.equal(currencyMap);
+        });
     });
 
 
